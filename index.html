@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Keegan likes Dogs</title>
+</head>
+<style>
+body {
+margin: 0px, auto;
+  font-family: 'Helvetica Neue', arial;
+  font-weight: 100;
+text-align: center;
+}
+h1 {
+  font-weight: 100;
+  font-size: 3em;
+}
+
+p {
+  margin: 0;
+}
+
+div.ball {
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+margin: 0 auto;
+}
+
+div.answer {
+  background-color: #333;
+  border: 1px solid #333;
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
+  margin: 25% auto;
+}
+
+p#eight {
+  font-size: 5em;
+  margin: 20% auto;
+  color: white;
+}
+
+p#answer {
+  padding: 25px;
+  color: white;
+font-size: 15px;
+  letter-spacing: 2px;
+}
+
+button, input {
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-family: 'Helvetica Neue', arial;
+  font-weight: 100;
+  letter-spacing: 2px;
+  transition: .5s font-size;
+}
+
+button:hover {
+  font-size: 1.4em;
+}
+</style>
+<h1>8 Ball Thing</h1>
+<p>Put in a question:</p>
+<input type="text" id="input"/>
+<div class="ball">
+  <div class="answer">
+    <p id="eight">rblox</p>
+    <p id="answer"></p>
+  </div>
+</div>
+<button id="button">
+  Shake Ball
+</button>
+<script>
+
+var options = ["Yes", "No", "What sort of question is that?", "Go ask 10 ball", "Sure mate I'm just trying to have my coffee", "How did you get into my house?", "How would I know...", "If Lachlan showers, then yes", "69", Math.PI, "I wish", "If Keegan likes dogs, your answer is yes", "I'm tired, go away", "Very very much!!"];
+
+
+var input = document.getElementById("input");
+var answer = document.getElementById("answer");
+var eight = document.getElementById("eight");
+button.addEventListener("click", function() {
+  eight.innerText = "";
+    var num = input.value.length % options.length;
+    answer.innerText = options[num];
+});
+</script>
+
+</html>
